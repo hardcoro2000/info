@@ -3,70 +3,178 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pagina di prova</title>
+  <title>Hard Coro de' Marchi</title>
+  <meta name="description" content="Hard Coro de' Marchi: coro popolare di canto sociale. Prove ogni mercoledì dalle 20 alle 22 presso la Scuola Popolare di Musica Ivan Illich, Bologna.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f4f6f8;
-      --card: #ffffff;
-      --text: #1f2933;
-      --accent: #2b7a4b;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #14181c;
-        --card: #1e242a;
-        --text: #e6ebef;
-        --accent: #5fc58a;
-      }
+      --nero: #000000;
+      --rosso: #ff2a2a;
+      --rosso-scuro: #8f1313;
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      padding: 16px;
+      background: var(--nero);
+      color: var(--rosso);
+      font-family: "Special Elite", "Courier New", monospace;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
-    main {
-      background: var(--card);
-      max-width: 520px;
-      width: 100%;
-      padding: 32px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    .pagina {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+    }
+
+    header {
       text-align: center;
+      padding-bottom: 28px;
+      border-bottom: 3px solid var(--rosso);
+      margin-bottom: 36px;
     }
-    h1 { margin-top: 0; color: var(--accent); }
-    button {
-      background: var(--accent);
-      color: #fff;
-      border: 0;
-      padding: 10px 20px;
-      border-radius: 8px;
+    h1 {
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-weight: 400;
+      font-size: clamp(3rem, 12vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: 0.04em;
+      margin: 0;
+      text-transform: uppercase;
+      text-shadow: 3px 3px 0 var(--rosso-scuro);
+    }
+    .sottotitolo {
+      margin: 14px 0 0;
       font-size: 1rem;
-      cursor: pointer;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
     }
-    button:hover { opacity: 0.9; }
-    #ora { margin-top: 16px; font-variant-numeric: tabular-nums; }
+
+    p { margin: 0 0 1.2em; }
+
+    .incontri {
+      border: 3px solid var(--rosso);
+      padding: 20px 22px;
+      margin: 36px 0;
+      background: #120000;
+    }
+    .incontri p { margin: 0; }
+
+    .direzione {
+      text-align: center;
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.06em;
+      margin: 36px 0 0;
+    }
+
+    h2 {
+      font-family: "Bebas Neue", Impact, sans-serif;
+      font-weight: 400;
+      font-size: 2.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 56px 0 12px;
+      border-bottom: 3px solid var(--rosso);
+      padding-bottom: 6px;
+    }
+    .contatti p { margin-bottom: 0.9em; }
+    .nome { font-weight: bold; }
+
+    a {
+      color: var(--rosso);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+    a:hover, a:focus {
+      background: var(--rosso);
+      color: var(--nero);
+      outline: none;
+    }
+
+    footer {
+      margin-top: 56px;
+      text-align: center;
+      font-size: 1.6rem;
+    }
+
+    @media (max-width: 480px) {
+      body { font-size: 1rem; }
+      .pagina { padding-top: 32px; }
+    }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Funziona! 🎉</h1>
-    <p>Questa è la tua prima pagina statica su GitHub Pages.</p>
-    <button id="btn">Che ora è?</button>
-    <p id="ora"></p>
-  </main>
+  <div class="pagina">
 
-  <script>
-    document.getElementById("btn").addEventListener("click", function () {
-      document.getElementById("ora").textContent =
-        "Ora sul tuo dispositivo: " + new Date().toLocaleTimeString("it-IT");
-    });
-  </script>
+    <header>
+      <h1>Hard Coro<br>de' Marchi</h1>
+      <p class="sottotitolo">Canto sociale &middot; Bologna</p>
+    </header>
+
+    <main>
+      <p>
+        L'Hard Coro de' Marchi nasce nel lontano 2000 per allegra e libertaria reazione all'invasione
+        giubilare e muove i suoi primi passi nel luogo che più gli è consono: l'osteria.
+      </p>
+      <p>
+        È stato un laboratorio stabile della Scuola di Musica Ivan Illich per gran parte della sua esistenza, e
+        qui continua ad essere ospitato per le prove settimanali.
+      </p>
+      <p>
+        Attualmente è un coro indipendente, con una direzione musicale e un'autogestione organizzativa di
+        tipo collegiale.
+      </p>
+      <p>
+        Più volte è morto e risorto (come altri più noti soggetti), al momento gode di ottima salute e cresce
+        incessantemente, come la pasta lievitata!
+      </p>
+      <p>
+        Avvistato da più parti (in patria e all'estero) in manifestazioni, adunate sediziose, banchetti, piazze e
+        perfino teatri, promuove modalità di insegnamento, apprendimento ed esibizioni non performative
+        né competitive, attraverso un cammino che avanza al passo di chi va più lento, senza rinunciare a un
+        lavoro serio di miglioramento vocale e musicale, nel rispetto del metodo della trasmissione orale.
+      </p>
+      <p>
+        Aperto a chiunque abbia desiderio e piacere di cantare insieme e condividere la passione per il canto
+        sociale, a chi conosce la musica e a chi non sa cosa sia. A intonatə e a diversamente intonatə.
+      </p>
+      <p>
+        Un organico più o meno in/stabile di oltre trenta elementi; un repertorio già vasto di canti anarchici
+        e socialisti, canti di lavoro, contro la guerra, anticlericali, satirici e femministi, italiani e non.
+      </p>
+
+      <div class="incontri">
+        <p>
+          L'Hardcoro De'Marchi si incontra ogni mercoledì dalle 20 alle 22 presso la Scuola Popolare di
+          Musica Ivan Illich. La partecipazione è gratuita e limitata ai possessori di tessera SPMII 26/27.
+        </p>
+      </div>
+
+      <p class="direzione">Dirige la maestra Chelu Deiana.</p>
+
+      <section class="contatti">
+        <h2>Contatti</h2>
+        <p>
+          <span class="nome">Chelu:</span>
+          <a href="https://wa.me/393492235071">3492235071</a> (Messaggi WhatsApp)
+        </p>
+        <p>
+          <span class="nome">Francesco:</span>
+          <a href="https://wa.me/393475019393">3475019393</a> (Messaggi WhatsApp)
+        </p>
+        <p>
+          <span class="nome">Segreteria SPMII per tesseramento:</span>
+          Via Giuriolo, 7 - Bologna.
+          Tel: <a href="tel:+39051357753">051 357753</a> (lun-ven 17.00-20.00)
+        </p>
+      </section>
+    </main>
+
+  </div>
 </body>
 </html>
