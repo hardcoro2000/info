@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagina di prova</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --text: #1f2933;
+      --accent: #2b7a4b;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14181c;
+        --card: #1e242a;
+        --text: #e6ebef;
+        --accent: #5fc58a;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      padding: 16px;
+    }
+    main {
+      background: var(--card);
+      max-width: 520px;
+      width: 100%;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h1 { margin-top: 0; color: var(--accent); }
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: 0;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover { opacity: 0.9; }
+    #ora { margin-top: 16px; font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Funziona! 🎉</h1>
+    <p>Questa è la tua prima pagina statica su GitHub Pages.</p>
+    <button id="btn">Che ora è?</button>
+    <p id="ora"></p>
+  </main>
+
+  <script>
+    document.getElementById("btn").addEventListener("click", function () {
+      document.getElementById("ora").textContent =
+        "Ora sul tuo dispositivo: " + new Date().toLocaleTimeString("it-IT");
+    });
+  </script>
+</body>
+</html>
