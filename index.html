@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
   <title>Hard Coro de' Marchi</title>
   <meta name="description" content="Hard Coro de' Marchi - laboratorio di canto sociale, Bologna">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
   <style>
     :root {
       /* ===== COLORI ===== */
@@ -32,19 +34,25 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;   /* evita l'ingrandimento automatico del testo su iPhone in orizzontale */
+      text-size-adjust: 100%;
+    }
     body {
       margin: 0;
       background: var(--sfondo);
       color: var(--testo);
       font-family: var(--font-testo);
-      font-size: 1.1rem;
+      /* Dimensione fluida: ~15,6px su telefono, ~17,7px a 1100px, max 18,4px su schermi grandi */
+      font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1.15rem);
       line-height: 1.7;
+      overflow-wrap: break-word;
     }
     .pagina {
       max-width: 760px;
       margin: 0 auto;
-      padding: 48px 20px 64px;
+      padding: 48px clamp(16px, 4vw, 20px) 64px;
     }
 
     header {
@@ -118,9 +126,17 @@
       outline: none;
     }
 
+    /* Area di tocco più grande per telefono e WhatsApp */
+    .contatti a[href^="tel:"],
+    .contatti a[href^="https://wa.me"] {
+      display: inline-block;
+      padding: 6px 2px;
+      margin: -6px 0;   /* compensa il padding: l'area di tocco cresce ma l'interlinea resta quella di prima */
+    }
+
     @media (max-width: 480px) {
-      body { font-size: 1rem; }
       .pagina { padding-top: 32px; }
+      .incontri { padding: 16px 14px; }
     }
   </style>
 </head>
@@ -164,7 +180,7 @@
         e socialisti, canti di lavoro, contro la guerra, anticlericali, satirici e femministi, italiani e non.
       </p>
 
-      <p class="direzione">Dirige la maestra Chelu Deiana</p>
+      <p class="direzione">Dirige la maestra: Chelu Deiana</p>
 
       <div class="incontri">
         <p>
