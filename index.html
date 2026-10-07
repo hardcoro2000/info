@@ -73,18 +73,21 @@
     p { margin: 0 0 1.2em; }
 
     /* "dirige la maestra..." : minuscolo, peso normale */
+    /* Spazio sopra = 36px, spazio sotto = 42px: i 6px in più compensano l'interlinea
+       del paragrafo precedente, così la distanza visiva sopra e sotto risulta uguale.
+       Per cambiare lo spazio, modifica i due numeri insieme (sotto = sopra + 6px). */
     .direzione {
       text-align: left;
       font-family: var(--font-testo);
       font-weight: 700;
       font-size: 1.2rem;
-      margin: 36px 0 0;
+      margin: 36px 0 42px;
     }
 
     .incontri {
       border: 3px solid var(--testo);
       padding: 20px 22px;
-      margin: 24px 0 36px;
+      margin: 0 0 36px;
       background: var(--riquadro);
     }
     .incontri p { margin: 0;
@@ -93,7 +96,7 @@
                  hyphens: auto;
                 }
     .incontri p + p { margin-top: 0.8em; }   /* spazio tra i due paragrafi: metti 0 se lo vuoi attaccato */
-    
+
     h2 {
       font-family: var(--font-titoli);
       font-weight: 600;
@@ -139,7 +142,7 @@
         giubilare e muove i suoi primi passi nel luogo che più gli è consono: l'osteria.
       </p>
       <p>
-        È stato un laboratorio stabile della Scuola Popolare di Musica Ivan Illich (SPMII) per gran parte della sua esistenza, e
+        È stato un laboratorio stabile della Scuola Popolare di Musica Ivan Illich per gran parte della sua esistenza, e
         qui continua ad essere ospitato per le prove settimanali.
       </p>
       <p>
@@ -173,7 +176,7 @@
           Musica Ivan Illich.
         </p>
         <p>
-          La partecipazione è gratuita ma limitata ai possessori di tessera SPMII.
+          La partecipazione è gratuita ma limitata ai possessori di tessera della SPMII.
         </p>
       </div>
 
@@ -193,7 +196,7 @@
         </p>
         <p>
           <span class="nome">Segreteria SPMII per tesseramento:</span>
-          Via Giuriolo, 7 - Bologna.
+          Via Giuriolo, 7 - Bologna.<br>
           Tel: <a href="tel:+39051357753">051 357753</a> (lun-ven 17.00-20.00)
         </p>
       </section>
