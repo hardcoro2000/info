@@ -4,23 +4,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hard Coro de' Marchi</title>
-  <meta name="description" content="Laboratorio di canto sociale - Bologna">
+  <meta name="description" content="Hard Coro de' Marchi - laboratorio di canto sociale, Bologna">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --nero: #FFFAFA;
-      --rosso: #ff2a2a;
-      --rosso-scuro: #8f1313;
+      /* ===== COLORI ===== */
+      /* Sfondo: tieni una riga sola attiva. */
+      --sfondo: #000000;
+      /* --sfondo: #121212; */
+      /* --sfondo: #1A1A1A; */
+
+      /* Testo: bianco attenuato, per evitare l'effetto "sbavatura" del bianco puro */
+      --testo: #F8F9FA;
+      /* --testo: #E9ECEF; */
+
+      /* Riquadro "incontri": un filo più chiaro dello sfondo */
+      --riquadro: #141414;
+
+      /* Ombra del titolo */
+      --ombra: #3A3A3A;
+
+      /* ===== FONT ===== */
+      --font-titoli: "Oswald", Impact, sans-serif;
+      --font-testo: "Courier Prime", "Courier New", monospace;
     }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background: var(--nero);
-      color: var(--rosso);
-      font-family: "Special Elite", "Courier New", monospace;
+      background: var(--sfondo);
+      color: var(--testo);
+      font-family: var(--font-testo);
       font-size: 1.1rem;
       line-height: 1.7;
     }
@@ -33,73 +50,68 @@
     header {
       text-align: center;
       padding-bottom: 28px;
-      border-bottom: 3px solid var(--rosso);
+      border-bottom: 3px solid var(--testo);
       margin-bottom: 36px;
     }
     h1 {
-      font-family: "Bebas Neue", Impact, sans-serif;
-      font-weight: 400;
-      font-size: clamp(3rem, 12vw, 6rem);
-      line-height: 0.95;
+      font-family: var(--font-titoli);
+      font-weight: 600;
+      font-size: clamp(2.6rem, 10vw, 4.6rem);
+      line-height: 1;
       letter-spacing: 0.04em;
       margin: 0;
       text-transform: uppercase;
-      text-shadow: 3px 3px 0 var(--rosso-scuro);
+      text-shadow: 3px 3px 0 var(--ombra);
     }
     .sottotitolo {
       margin: 14px 0 0;
-      font-size: 1rem;
+      font-size: 0.85rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
     }
 
     p { margin: 0 0 1.2em; }
 
-    .incontri {
-      border: 3px solid var(--rosso);
-      padding: 20px 22px;
-      margin: 36px 0;
-      background: #120000;
-    }
-    .incontri p { margin: 0; }
-
+    /* "dirige la maestra..." : minuscolo, peso normale */
     .direzione {
       text-align: center;
-      font-family: "Bebas Neue", Impact, sans-serif;
-      font-size: 1.2rem;
-      letter-spacing: 0.06em;
+      font-family: var(--font-testo);
+      font-weight: 400;
+      font-size: 1.1rem;
       margin: 36px 0 0;
     }
 
+    .incontri {
+      border: 3px solid var(--testo);
+      padding: 20px 22px;
+      margin: 24px 0 36px;
+      background: var(--riquadro);
+    }
+    .incontri p { margin: 0; }
+
     h2 {
-      font-family: "Bebas Neue", Impact, sans-serif;
-      font-weight: 400;
-      font-size: 2.4rem;
+      font-family: var(--font-titoli);
+      font-weight: 600;
+      font-size: 1.9rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       margin: 56px 0 12px;
-      border-bottom: 3px solid var(--rosso);
+      border-bottom: 3px solid var(--testo);
       padding-bottom: 6px;
     }
     .contatti p { margin-bottom: 0.9em; }
-    .nome { font-weight: bold; }
+    .nome { font-weight: 700; }
 
     a {
-      color: var(--rosso);
+      color: var(--testo);
       text-decoration: underline;
       text-decoration-thickness: 2px;
       text-underline-offset: 4px;
     }
     a:hover, a:focus {
-      background: var(--rosso);
-      color: var(--nero);
+      background: var(--testo);
+      color: var(--sfondo);
       outline: none;
-    }
-
-    footer {
-      margin-top: 56px;
-      text-align: center;
-      font-size: 1.6rem;
     }
 
     @media (max-width: 480px) {
@@ -148,15 +160,15 @@
         e socialisti, canti di lavoro, contro la guerra, anticlericali, satirici e femministi, italiani e non.
       </p>
 
-      <p class="direzione">Dirige la maestra Chelu Deiana</p>
+      <p class="direzione">dirige la maestra Chelu Deiana</p>
 
       <div class="incontri">
         <p>
-          L'Hardcoro De'Marchi si incontra ogni mercoledì dalle 20 alle 22 presso la Scuola Popolare di
+          L'Hard Coro de' Marchi si incontra ogni mercoledì dalle 20 alle 22 presso la Scuola Popolare di
           Musica Ivan Illich. La partecipazione è gratuita ma limitata ai possessori di tessera SPMII.
         </p>
       </div>
-      
+
       <section class="contatti">
         <h2>Contatti</h2>
         <p>
