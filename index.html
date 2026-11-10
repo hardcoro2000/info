@@ -29,6 +29,10 @@
       /* Ombra del titolo */
       --ombra: #3A3A3A;
 
+      /* Rosso per la sezione eventi */
+      --rosso: #FF2A2A;
+      /* --rosso: #E10600; */   /* alternativa più scura */
+
       /* ===== FONT ===== */
       --font-titoli: "Oswald", Impact, sans-serif;
       --font-testo: "Courier Prime", "Courier New", monospace;
@@ -141,6 +145,17 @@
       margin: -6px 0;   /* compensa il padding: l'area di tocco cresce ma l'interlinea resta quella di prima */
     }
 
+    .eventi li,
+    .eventi li a {
+      color: var(--rosso);
+    }
+    .eventi li { border-bottom-color: var(--rosso); }   /* anche la linea tratteggiata diventa rossa */
+    .eventi li a:hover,
+    .eventi li a:focus {
+      background: var(--rosso);
+      color: var(--sfondo);
+    }
+
     @media (max-width: 480px) {
       .pagina { padding-top: 32px; }
       .incontri { padding: 16px 14px; }
@@ -216,6 +231,24 @@
           <span class="nome">Sara:</span>
           <a href="https://wa.me/393401053587">3401053587</a> (Messaggi WhatsApp)
         </p>
+      </section>
+
+      <section class="eventi">
+        <h2>Dove ci trovate prossimamente...</h2>
+        <ul>
+          <li>
+            <span class="data">Domenica 15 novembre dalle 14:45</span>
+            <a href="https://www.instagram.com/p/DfgyWuhMPsb/?cplk=MzU1cmdrYThqc3Bq" target="_blank" rel="noopener">Resistere qui Resistere ovunque - Presidio cantato di commemorazione dell'eccidio del castello estense</a>
+            <span class="luogo">Corso Martiri della Libertà &middot; Ferrara</span>
+            <span class="collab">in collaborazione con <a href="https://www.instagram.com/adaltavocefestival" target="_blank" rel="noopener">Ad Alta Voce! Festival</a></span>
+          </li>
+          <li>
+            <span class="data">Domenica 29 novembre</span>
+            Riapertura sentiero CAI 900
+            <span class="luogo">Presto i dettagli &middot; Bologna</span>
+            <span class="collab">in collaborazione con <a href="https://ape-alveare.it/ape-bologna/" target="_blank" rel="noopener">APE Bologna</a></span>
+          </li>
+        </ul>
       </section>
     </main>
 
