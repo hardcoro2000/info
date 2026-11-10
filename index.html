@@ -145,15 +145,42 @@
       margin: -6px 0;   /* compensa il padding: l'area di tocco cresce ma l'interlinea resta quella di prima */
     }
 
-    .eventi li,
-    .eventi li a {
-      color: var(--rosso);
+    /* ===== DOVE CI TROVATE (post-it) ===== */
+    .eventi {
+      --carta: #FFF9E0;          /* colore del post-it: giallo chiarissimo */
+      /* --carta: #FFFFFF; */    /* alternativa: bianco */
+      --inchiostro: #8B1A1A;     /* rosso scuro per le scritte */
     }
-    .eventi li { border-bottom-color: var(--rosso); }   /* anche la linea tratteggiata diventa rossa */
+    .eventi ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 22px;                 /* distanza tra un post-it e l'altro */
+    }
+    .eventi li {
+      background: var(--carta);
+      color: var(--inchiostro);
+      padding: 18px 20px 20px;
+      box-shadow: 4px 5px 0 rgba(255, 255, 255, 0.12), 0 8px 18px rgba(0, 0, 0, 0.6);
+      transform: rotate(-0.8deg);
+    }
+    .eventi li:nth-child(even) { transform: rotate(0.7deg); }   /* inclinazione alternata: togli le due righe transform per averli dritti */
+    .eventi .data {
+      display: block;
+      font-family: var(--font-titoli);
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .eventi .luogo { display: block; font-size: 0.9em; }    /* va a capo sotto il titolo */
+    .eventi .collab { display: block; font-size: 0.9em; }   /* va a capo sotto il luogo */
+    .eventi li a { color: var(--inchiostro); }
     .eventi li a:hover,
     .eventi li a:focus {
-      background: var(--rosso);
-      color: var(--sfondo);
+      background: var(--inchiostro);
+      color: var(--carta);
     }
 
     @media (max-width: 480px) {
@@ -174,34 +201,34 @@
 
     <main>
       <p>
-        L’hard Coro De’Marchi nasce nel 2000 tra i tavoli dell’omonima osteria bolognese, 
+        L’hard Coro De’Marchi nasce nel 2000 tra i tavoli dell’omonima osteria bolognese,
         come antidoto ai canti imperanti – ed impregnanti – del Grande Giubileo.
       </p>
       <p>
-        Dopo una storia lunga 24 anni come laboratorio stabile della Scuola Popolare di Musica Ivan Illich, 
-        oggi è un coro indipendente: mantiene una direzione musicale, ma si affida 
+        Dopo una storia lunga 24 anni come laboratorio stabile della Scuola Popolare di Musica Ivan Illich,
+        oggi è un coro indipendente: mantiene una direzione musicale, ma si affida
         a una gestione organizzativa di tipo collegiale.
       </p>
       <p>
-        Con oltre 30 voci di ogni timbro e colore, il coro canta dove lo chiamano e dove no: 
-        manifestazioni, piazze e mercati; festival, musei e teatri; centri sociali e culturali; 
+        Con oltre 30 voci di ogni timbro e colore, il coro canta dove lo chiamano e dove no:
+        manifestazioni, piazze e mercati; festival, musei e teatri; centri sociali e culturali;
         eventi locali e internazionali. (Raramente, matrimoni e funerali).
       </p>
       <p>
-        Un repertorio in costante espansione percorre la storia dal basso attraverso canti 
-        anarchici e socialisti, canti di lavoro, contro la guerra, anticlericali, satirici e femministi. 
+        Un repertorio in costante espansione percorre la storia dal basso attraverso canti
+        anarchici e socialisti, canti di lavoro, contro la guerra, anticlericali, satirici e femministi.
         Un viaggio sonoro tra multilinguismo, contaminazioni musicali e filologia creativa.
       </p>
       <p>
-        Nel rispetto del metodo della trasmissione orale, il laboratorio promuove un'idea di canto non performativa, 
-        avanzando al passo di chi va più lento, senza rinunciare a un lavoro serio 
+        Nel rispetto del metodo della trasmissione orale, il laboratorio promuove un'idea di canto non performativa,
+        avanzando al passo di chi va più lento, senza rinunciare a un lavoro serio
         di miglioramento musicale e vocale.
       </p>
       <p>
-        La partecipazione è gratuita e sempre aperta a chiunque abbia desiderio di cantare insieme e condividere la passione 
+        La partecipazione è gratuita e sempre aperta a chiunque abbia desiderio di cantare insieme e condividere la passione
         per il canto sociale. A chi conosce la musica e a chi non sa cosa sia. A intonatə e a diversamente intonatə.
       </p>
-      
+
       <p class="direzione">Il laboratorio è diretto da Chelu Deiana</p>
 
       <div class="incontri">
