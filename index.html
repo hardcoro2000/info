@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta name="google-site-verification" content="irAEMY_ZEIfYrooX_8zLbi1xwVV7cElgkdHwqmN0f4w" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
@@ -72,12 +71,6 @@
       text-transform: uppercase;
       text-shadow: 3px 3px 0 var(--ombra);
     }
-    h1 img {
-      display: block;
-      margin: 0 auto;
-      width: min(100%, 560px);   /* larghezza massima del logo: cambiala a piacere */
-      height: auto;
-    }
     .sottotitolo {
       margin: 14px 0 0;
       font-size: 0.85rem;
@@ -121,6 +114,28 @@
     .contatti p { margin-bottom: 0.9em; }
     .nome { font-weight: 700; }
 
+    /* ===== DOVE CI TROVATE ===== */
+    .eventi ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .eventi li {
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--testo);
+    }
+    .eventi li:last-child { border-bottom: 0; }
+    /* Data in evidenza, sopra il titolo dell'evento */
+    .eventi .data {
+      display: block;
+      font-family: var(--font-titoli);
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .eventi .luogo { display: block; font-size: 0.9em; }
+
     a {
       color: var(--testo);
       text-decoration: underline;
@@ -151,59 +166,52 @@
   <div class="pagina">
 
     <header>
-      <h1>
-        <img src="HCDM.jpg" alt="Hard Coro de' Marchi" width="600" height="300">
-      </h1>
+      <h1>Hard Coro<br>de' Marchi</h1>
       <p class="sottotitolo">Laboratorio di canto sociale &middot; Bologna</p>
     </header>
 
     <main>
       <p>
-        L’hard Coro De’Marchi nasce nel 2000 tra i tavoli dell’omonima osteria bolognese, 
-        come antidoto ai canti imperanti – ed impregnanti – del Grande Giubileo.
+        L’Hard Coro De’Marchi nasce tra i tavoli dell’omonima osteria bolognese
+        come antidoto ai canti imperanti -ed impregnanti- del Grande Giubileo, nel 2000.
       </p>
       <p>
-        Dopo una storia lunga 24 anni come laboratorio stabile della Scuola Popolare di Musica Ivan Illich, 
-        oggi è un coro indipendente: mantiene una direzione musicale, ma si affida 
-        a una gestione organizzativa di tipo collegiale.
+        Dal 2002 al 2025/26 è stato un laboratorio stabile della Scuola Popolare di Musica Ivan Illich e dal
+        2026/2027 è diventato un coro indipendente, con una direzione musicale, ma una gestione organizzativa
+        di tipo collegiale.
       </p>
       <p>
-        Con oltre 30 voci di ogni timbro e colore, il coro canta dove lo chiamano e dove no: 
-        manifestazioni, piazze e mercati; festival, musei e teatri; centri sociali e culturali; 
-        eventi locali e internazionali. (Raramente, matrimoni e funerali).
+        Un coro di oltre 30 voci; un repertorio in espansione di canti anarchici e socialisti, canti di lavoro,
+        contro la guerra, anticlericali, satirici e femministi, italiani e non.
       </p>
       <p>
-        Un repertorio in costante espansione percorre la storia dal basso attraverso canti 
-        anarchici e socialisti, canti di lavoro, contro la guerra, anticlericali, satirici e femministi. 
-        Un viaggio sonoro tra multilinguismo, contaminazioni musicali e filologia creativa.
+        Canta dove lo chiamano e dove non: spazi occupati, piazze e mercati. Festival, musei e teatri.
+        Centri sociali e culturali. Manifestazioni locali ed eventi internazionali. Matrimoni e funerali.
       </p>
       <p>
-        Nel rispetto del metodo della trasmissione orale, il laboratorio promuove un'idea di canto non performativa, 
-        avanzando al passo di chi va più lento, senza rinunciare a un lavoro serio 
-        di miglioramento musicale e vocale.
+        Promuove modalità di insegnamento, apprendimento ed esibizioni non performative
+        né competitive, attraverso un cammino che avanza al passo di chi va più lento, senza rinunciare a un
+        lavoro serio di miglioramento vocale e musicale, nel rispetto del metodo della trasmissione orale.
       </p>
       <p>
-        La partecipazione è gratuita e sempre aperta a chiunque abbia desiderio di cantare insieme e condividere la passione 
-        per il canto sociale. A chi conosce la musica e a chi non sa cosa sia. A intonatə e a diversamente intonatə.
+        Aperto a chiunque abbia desiderio e piacere di cantare insieme e condividere la passione per il canto
+        sociale, a chi conosce la musica e a chi non sa cosa sia. A intonatə e a diversamente intonatə.
       </p>
-      
-      <p class="direzione">Il laboratorio è diretto da Chelu Deiana</p>
+
+      <p class="direzione">Dirige la maestra Chelu Deiana</p>
 
       <div class="incontri">
         <p>
-          L'Hard Coro de' Marchi si incontra ogni mercoledì dalle 20:00 alle 22:00.
+          L'Hard Coro de' Marchi si incontra ogni mercoledì dalle 20:00 alle 22:00 presso la
+          <a href="https://www.spmii.it/" target="_blank" rel="noopener">Scuola Popolare di Musica Ivan Illich</a>.
         </p>
         <p>
-          Per ulteriori info e dettagli, contattaci!
+          La partecipazione è gratuita ma limitata ai possessori di tessera associativa.
         </p>
       </div>
 
       <section class="contatti">
-        <h2>Info e Contatti</h2>
-        <p>
-          <span class="nome">E-Mail:</span>
-          <a href="mailto:lab.hardcorodemarchi@gmail.com">lab.hardcorodemarchi@gmail.com</a>
-        </p>
+        <h2>Contatti</h2>
         <p>
           <span class="nome">Chelu:</span>
           <a href="https://wa.me/393492235071">3492235071</a> (Messaggi WhatsApp)
@@ -216,6 +224,33 @@
           <span class="nome">Sara:</span>
           <a href="https://wa.me/393401053587">3401053587</a> (Messaggi WhatsApp)
         </p>
+        <p>
+          <span class="nome">Segreteria SPMII per tesseramento:</span>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Via+Giuriolo+7+Bologna" target="_blank" rel="noopener">Via Giuriolo, 7 - Bologna</a>.<br>
+          Tel: <a href="tel:+39051357753">051 357753</a> (lun-ven 17.00-20.00)
+        </p>
+      </section>
+
+      <!-- ===== DOVE CI TROVATE PROSSIMAMENTE =====
+           Per aggiungere una data: copia un blocco <li>...</li> e modifica data, link e luogo.
+           Per togliere un evento passato: cancella il suo <li>. Il link è facoltativo:
+           se non c'è, togli il tag <a> e lascia solo il testo. -->
+      <section class="eventi">
+        <h2>Dove ci trovate prossimamente...</h2>
+        <ul>
+          <li>
+            <span class="data">Domenica 15 novembre dalle 14:45</span>
+            <a href="https://www.instagram.com/p/DfgyWuhMPsb/?cplk=MzU1cmdrYThqc3Bq" target="_blank" rel="noopener">Resistere qui Resistere ovunque - Presidio cantato di commemorazione dell'eccidio del castello estense</a>
+            <span class="luogo">Corso Martiri della Libertà &middot; Ferrara</span>
+            <span class="collab">in collaborazione con <a href="https://www.instagram.com/adaltavocefestiv" target="_blank" rel="noopener">Ad Alta Voce! Festival</a></span>
+          </li>
+          <li>
+            <span class="data">Domenica 29 novembre</span>
+            Riapertura sentiero CAI 900
+            <span class="luogo">A partire da... &middot; Bologna</span>
+            <span class="collab">in collaborazione con <a href="https://ape-alveare.it/ape-bologna/" target="_blank" rel="noopener">APE Bologna</a></span>
+          </li>
+        </ul>
       </section>
     </main>
 
