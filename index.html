@@ -182,7 +182,28 @@
       background: var(--inchiostro);
       color: var(--carta);
     }
-
+    
+    /* Pulsante "Eventi passati" / "Torna alla home" */
+    .azioni {
+      margin-top: 36px;
+      text-align: center;
+            }
+    .bottone {
+      display: inline-block;
+      border: 3px solid var(--testo);
+      padding: 10px 22px;
+      font-family: var(--font-titoli);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+            }
+    .bottone:hover,
+    .bottone:focus {
+      background: var(--testo);
+      color: var(--sfondo);
+            }
+    
     @media (max-width: 480px) {
       .pagina { padding-top: 32px; }
       .incontri { padding: 16px 14px; }
@@ -276,6 +297,7 @@
             <span class="collab">in collaborazione con <a href="https://ape-alveare.it/ape-bologna/" target="_blank" rel="noopener">APE Bologna</a></span>
           </li>
         </ul>
+        <p class="azioni"><a class="bottone" href="eventi-passati.html">Eventi passati</a></p>
       </section>
     </main>
 
